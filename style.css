@@ -1,0 +1,37 @@
+
+main,
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rectangle {
+    height: 500px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sum of the widths is equal to sum of rectancle class */
+
+
+.yellow_section {
+    background-color: #F3BE21; 
+    width: 30px;
+    height: 100%;
+}
+
+.green_section {
+    background-color: #3F520B;
+    width: 240px;
+    height: 100%;
+}
+
+.blue_section {
+    background-color:#035186;
+    width: 130px;
+    height: 100%;
+}

@@ -1,3 +1,24 @@
+/* BASIC STYLING  */
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+:root {
+    --poster-background-yellow: #F3BE21; 
+    --poster-background-green: #3F520B; 
+    --poster-background-blue:#035186; 
+}
+
+/* ///////////////// */
+
 
 main,
 header {
@@ -8,8 +29,10 @@ header {
 }
 
 .rectangle {
+
     height: 500px;
     width: 400px;
+  
 
     display: flex;
     flex-direction: row;
@@ -17,21 +40,52 @@ header {
 
 /* Sum of the widths is equal to sum of rectancle class */
 
+/* YELLOW SECTION */
 
 .yellow_section {
-    background-color: #F3BE21; 
+    background-color:var(--poster-background-yellow);
+     
     width: 30px;
-    height: 100%;
+    height: 100%
 }
 
+/* GREEN SECTION */
+
 .green_section {
-    background-color: #3F520B;
+    background-color:var(--poster-background-green);
     width: 240px;
     height: 100%;
 }
 
+.same-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.green_section p {
+    padding: 0.5rem;
+}
+
+.small-text-container {
+ text-align: right;
+ font-size: 10px;
+
+}
+
+/* BLUE SECTION */
+
 .blue_section {
-    background-color:#035186;
+    background-color:var(--poster-background-blue);
     width: 130px;
-    height: 100%;
+    height: 100%;  
+}
+
+.blue_section p {
+    padding: 0.5rem;
+}
+
+.blue_section .small_text {
+   font-size: 10px;
+   margin-right: 2.5rem;
 }

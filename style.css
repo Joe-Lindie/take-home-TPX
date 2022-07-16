@@ -2,6 +2,8 @@
 
 html {
     box-sizing: border-box;
+    /* 62.5% of 16px browser font size is 10px */
+    font-size: 62.5%;
   }
   *,
   *:before,
@@ -17,75 +19,71 @@ html {
     --poster-background-blue:#035186; 
 }
 
-/* ///////////////// */
+/* GENERAL STYLING  */
 
-
-main,
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.parent {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
-.rectangle {
 
-    height: 500px;
-    width: 400px;
-  
-
-    display: flex;
-    flex-direction: row;
+.poster_border {
+    min-width: 40rem;
+    min-height: 55rem;
+   
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* Sum of the widths is equal to sum of rectancle class */
+.poster_content_container {
+    display: flex;
+}
 
-/* YELLOW SECTION */
+.title {
+    font-size: 2rem;
+    padding-left: 1rem;
+}
 
-.yellow_section {
+.text {
+    font-size: 1rem;
+    padding: 0 1rem 
+}
+
+/* YELLOW SECTION STYLING */
+
+.yellow_strip {
     background-color:var(--poster-background-yellow);
-     
-    width: 30px;
-    height: 100%
+    width: 3rem;
+    min-height: 100%
 }
 
-/* GREEN SECTION */
+/* GREEN SECTION STYLING */
 
-.green_section {
+.green_strip {
     background-color:var(--poster-background-green);
-    width: 240px;
-    height: 100%;
-}
+    width: 22rem;
+    min-height: 100%;
 
-.same-line {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
-.green_section p {
-    padding: 0.5rem;
+.space {
+    padding-bottom: 10rem;
 }
 
-.small-text-container {
- text-align: right;
- font-size: 10px;
+/* BLUE SECTION STYLING */
 
-}
-
-/* BLUE SECTION */
-
-.blue_section {
+.blue_strip {
     background-color:var(--poster-background-blue);
-    width: 130px;
-    height: 100%;  
+    width: 15rem;
+    min-height: 100%;  
 }
 
-.blue_section p {
-    padding: 0.5rem;
-}
-
-.blue_section .small_text {
-   font-size: 10px;
-   margin-right: 2.5rem;
+.blue_strip .title,
+.blue_strip .text {
+    padding-bottom: 2rem;
 }

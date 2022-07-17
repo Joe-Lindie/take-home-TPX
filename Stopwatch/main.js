@@ -9,9 +9,43 @@ startBtn.addEventListener("click", startTimerFn)
 pauseBtn.addEventListener("click", pauseTimerFn)
 resettBtn.addEventListener("click", resetTimerFn)
 
+let hours = 0
+let minutes = 0
+let seconds = 0
+let centiseconds = 0
+
 //FUNCTIONS
 function startTimerFn() {
-  // add start timer logic here
+  // centiseconds = centiseconds + 0.01
+
+  // if (centiseconds === 100) {
+  //   seconds = seconds + 1
+  //   centiseconds = 0
+  // }
+
+  seconds = seconds + 1
+
+  if (seconds === 60) {
+    minutes = minutes + 1
+    seconds = 0
+    centiseconds = 0
+  }
+
+  if (minutes === 60) {
+    hours = hours + 1
+    minutes = 0
+    seconds = 0
+    centiseconds = 0
+  }
+
+  // if (seconds < 9) {
+  //   seconds = "0" + seconds
+  //   console.log(seconds)
+  // }
+
+  timerOutput.innerHTML = `${hours}:${minutes}:${seconds}:${centiseconds}`
+
+  setTimeout(startTimerFn, 1000)
 }
 
 function pauseTimerFn() {

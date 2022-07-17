@@ -13,6 +13,7 @@ let hours = 0
 let minutes = 0
 let seconds = 0
 let centiseconds = 0
+let test = "0"
 
 //FUNCTIONS
 
@@ -28,6 +29,7 @@ function startTimerFn() {
 
   if (seconds === 60) {
     minutes = minutes + 1
+
     seconds = 0
     centiseconds = 0
   }
@@ -39,13 +41,14 @@ function startTimerFn() {
     centiseconds = 0
   }
 
-  // if (seconds < 9) {
-  //   seconds = "0" + seconds
-  //   console.log(seconds)
-  // }
+  //ADDS A ZERO TO FORMAT TIME
+  let cent = centiseconds < 10 ? "0" + centiseconds : centiseconds
+  let sec = seconds < 10 ? "0" + seconds : seconds
+  let min = minutes < 10 ? "0" + minutes : minutes
+  let hr = hours < 10 ? "0" + hours : hours
 
   setTimeout(startTimerFn, 1000)
-  timerOutput.innerHTML = `${hours}:${minutes}:${seconds}:${centiseconds}`
+  timerOutput.innerHTML = `${hr}:${min}:${sec}:${cent}`
 }
 
 function pauseTimerFn() {

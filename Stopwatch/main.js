@@ -15,6 +15,7 @@ let seconds = 0
 let centiseconds = 0
 
 //FUNCTIONS
+
 function startTimerFn() {
   // centiseconds = centiseconds + 0.01
 
@@ -43,9 +44,8 @@ function startTimerFn() {
   //   console.log(seconds)
   // }
 
-  timerOutput.innerHTML = `${hours}:${minutes}:${seconds}:${centiseconds}`
-
   setTimeout(startTimerFn, 1000)
+  timerOutput.innerHTML = `${hours}:${minutes}:${seconds}:${centiseconds}`
 }
 
 function pauseTimerFn() {
@@ -53,5 +53,5 @@ function pauseTimerFn() {
 }
 
 function resetTimerFn() {
-  // add reset timer logic here
+  timerOutput.innerHTML = `00:00:00:00`
 }

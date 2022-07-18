@@ -13,6 +13,7 @@ let hours = 0
 let minutes = 0
 let seconds = 0
 let centiseconds = 0
+let time
 
 //FUNCTIONS
 function startTimerFn() {
@@ -42,13 +43,13 @@ function startTimerFn() {
   let min = minutes < 10 ? "0" + minutes : minutes
   let hr = hours < 10 ? "0" + hours : hours
 
-  setTimeout(startTimerFn, 10)
+  time = setTimeout(startTimerFn, 10)
 
   timerOutput.innerHTML = `${hr}:${min}:${sec}:${cent}`
 }
 
 function pauseTimerFn() {
-  // add pause timer logic here
+  clearTimeout(time)
 }
 
 function resetTimerFn() {
@@ -59,8 +60,3 @@ function resetTimerFn() {
   seconds = 0
   centiseconds = 0
 }
-
-// Read more about settime out and clear time out
-// Could use Date.now()
-// What is the best way to record time?
-// Think about how to impliment a pause function

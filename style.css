@@ -40,6 +40,10 @@ header h1 {
     padding: 2rem;
 }
 
+.laptime {
+  text-align: center;
+}
+
 #output {
     margin-bottom: 1rem;
     font-size: 3rem;

@@ -88,8 +88,8 @@ function lapTimerFn() {
   lapOutput.appendChild(laptime)
 }
 
-//FUNCTION DELETE LAPS
+//FUNCTION DELETE ALL LAPS
 
 function deleteLapTimerFn() {
-  lapOutput.remove()
+  lapOutput.innerHTML = ""
 }

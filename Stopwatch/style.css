@@ -1,5 +1,34 @@
+/* BASIC STYLING */
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+:root {
+    --BG-red: #D95550;
+    --container-red: #DD6864;
+    --font-colour: #F2F3F5; 
+}
+
+  /* ///////////////////////////////////////// */
+
+
+  body {
+    background-color: var(--BG-red);
+    color: var(--font-colour);
+  }
+
 header h1 {
     text-align: center;
+    letter-spacing: 3px;
+    margin: 3rem 0;    
 }
 
 .stopwatch_container {
@@ -7,6 +36,13 @@ header h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--container-red);
+    padding: 2rem;
+}
+
+#output {
+    margin-bottom: 1rem;
+    font-size: 3rem;
 }
 
 .buttons_container {
@@ -17,14 +53,14 @@ header h1 {
 button {
     cursor: pointer;
     margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--font-colour);
 }
 
-button#start_button:hover,
-button#pause_button:hover {
-    background-color: lightgreen;
+button {
+    background-color: var(--font-colour);
+    color: var(--BG-red);
+    font-weight: bold;
 }
-
-button#reset_button:hover {
-    background-color: lightcoral;
-}
-

@@ -15,7 +15,8 @@ let seconds = 0
 let centiseconds = 0
 let time
 
-//FUNCTIONS
+//FUNCTION START TIMER
+
 function startTimerFn() {
   centiseconds = centiseconds + 1
 
@@ -48,9 +49,13 @@ function startTimerFn() {
   timerOutput.innerHTML = `${hr}:${min}:${sec}:${cent}`
 }
 
+//FUNCTION PAUSE TIMER
+
 function pauseTimerFn() {
   clearTimeout(time)
 }
+
+//FUNCTION RESET TIMER
 
 function resetTimerFn() {
   timerOutput.innerHTML = `00:00:00:00`
@@ -59,4 +64,6 @@ function resetTimerFn() {
   minutes = 0
   seconds = 0
   centiseconds = 0
+
+  clearTimeout(time)
 }

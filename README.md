@@ -8,3 +8,9 @@ You can find the my attempt to create a Stopwatch [here](https://joe-lindie.gith
 - [x] Start button: Contains a button to start the timer.
 - [x] Pause button: Contains a button to pause the running timer.
 - [x] Reset button: Contains a button to reset the timer to zero.
+
+##  Bonus Stories 
+
+- [x] Lap button: A button to write the time to a list
+- [x] Lap history button: A button to clear any lap history
+- [x] Looks good

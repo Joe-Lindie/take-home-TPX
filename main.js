@@ -43,7 +43,7 @@ function startTimerFn() {
     centiseconds = 0
   }
 
-  //ADDS A ZERO TO FORMAT TIME
+  // //ADDS A ZERO TO FORMAT TIME
   let cent = centiseconds < 10 ? "0" + centiseconds : centiseconds
   let sec = seconds < 10 ? "0" + seconds : seconds
   let min = minutes < 10 ? "0" + minutes : minutes

@@ -14,10 +14,12 @@ resettBtn.addEventListener("click", resetTimerFn)
 lapBtn.addEventListener("click", lapTimerFn)
 deleteLapOutput.addEventListener("click", deleteLapTimerFn)
 
+//GLOBAL VARIABLES
 let hours = 0
 let minutes = 0
 let seconds = 0
 let centiseconds = 0
+let lapNumber = 0
 let time
 
 //FUNCTION START TIMER
@@ -84,7 +86,9 @@ function lapTimerFn() {
   let min = minutes < 10 ? "0" + minutes : minutes
   let hr = hours < 10 ? "0" + hours : hours
 
-  laptime.innerHTML = `${hr}:${min}:${sec}:${cent}`
+  lapNumber = lapNumber + 1
+
+  laptime.innerHTML = `${lapNumber}:  ${hr}:${min}:${sec}:${cent}`
   lapOutput.appendChild(laptime)
 }
 
